@@ -19,3 +19,17 @@ export interface Trending {
     origin_country?:   string[];
     name?:             string;
 }
+
+export interface MovieSerieBase {
+    idGlobal: string;
+    id: number;
+    title?: string;
+    media_type: string;
+    name?: string;
+    poster_path: string;
+    vote_average: number;
+}
+
+export interface MovieSerieUser extends MovieSerieBase {
+    idUser: string;
+}

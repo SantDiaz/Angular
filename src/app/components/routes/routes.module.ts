@@ -7,8 +7,8 @@ import { IngresarComponent } from './ingresar/ingresar.component';
 import { SharedModule } from '../shared/shared.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MovieSerieService } from 'src/app/service/MovieSerieService';
-
-
+import { AuthService } from 'src/app/service/AuthService';
+import { MyListComponent } from './my-list/my-list.component';
 
 
 
@@ -18,7 +18,8 @@ import { MovieSerieService } from 'src/app/service/MovieSerieService';
     InicioComponent,
     PeliculasComponent,
     SeriesComponent,
-    IngresarComponent
+    IngresarComponent,
+    MyListComponent
   ],
   imports: [
     CommonModule,
@@ -30,8 +31,9 @@ import { MovieSerieService } from 'src/app/service/MovieSerieService';
     InicioComponent,
     PeliculasComponent,
     SeriesComponent,
-    IngresarComponent
+    IngresarComponent,
+    MyListComponent
   ],
-  providers: [MovieSerieService]
+  providers: [MovieSerieService, AuthService]
 })
 export class RoutesModule { }

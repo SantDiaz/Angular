@@ -1,5 +1,5 @@
 
-<section class="portadas ">
+<div class="portadas ">
        <div class="cards ">
         <div>
           <img class= "portada" src="https://image.tmdb.org/t/p/w500{{movies_series?.poster_path}}" alt="">
@@ -10,6 +10,15 @@
            <div class="point" >
           <p class="star" src="../../../../assets/star.png" ><span class="icon mr-2"></span> {{movies_series?.vote_average}}</p>
            </div>
-          </div>   
-    </section>
+      
+             
+            <div class="button">
+            <button class="conte" *ngIf= "isadd; else delete" (click)="agregarItem()">Agregar a mi lista</button> 
+          <ng-template #delete>
+            <button  class="conte" (click)="eliminarItem()">Eliminar a mi lista</button>
+          </ng-template>
+        </div>
+          </div> 
+
+        </div>
 

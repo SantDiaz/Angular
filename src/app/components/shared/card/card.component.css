@@ -83,3 +83,23 @@ h6 {
   bottom: 8.68%;
   color: #ffad49;
 }
+.button{
+  position: absolute;
+  top: 93.5%;
+  left: 58.7%;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px; 
+  letter-spacing: 0.02em; 
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin: 0px 8px;
+  background-color: transparent;}
+
+.conte{
+   flex-grow: 0;
+  margin: 0px 8px;
+  background-color: transparent;}
