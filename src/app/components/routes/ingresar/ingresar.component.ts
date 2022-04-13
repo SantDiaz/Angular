@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, Routes } from '@angular/router';
 import { AuthService } from 'src/app/service/AuthService';
+
+
+
+
+
 
 @Component({
   selector: 'app-ingresar',
@@ -41,8 +47,8 @@ async Ingresar (){
   try {
     const user = await this.authService.login(email, pass);
      if (user){
-       localStorage.setItem('Usuario', JSON.stringify(user.user))
-       this.router.navigate(['/Inicio']);
+       localStorage.setItem('usuario', JSON.stringify(user.user))
+       this.router.navigate(['/inicio']);
      } 
     } catch (err){
       console.log(err)
@@ -54,8 +60,8 @@ async IngresarConGoogle(){
   try {
     const user = await this.authService.loginWithGoogle(email, pass);
     if (user){
-      localStorage.setItem('Usuario', JSON.stringify(user.user))
-      this.router.navigate(['/Inicio']);
+      localStorage.setItem('usuario', JSON.stringify(user.user))
+      this.router.navigate(['/inicio']);
     } 
    } catch (err){
      console.log(err)

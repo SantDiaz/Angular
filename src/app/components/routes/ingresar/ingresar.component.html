@@ -1,5 +1,7 @@
 <!-- 
 
+
+
 <section class="container">
     
     <div>
@@ -34,11 +36,31 @@
                     <input (click)="Ingresar()" type="submit" class="button" value="Ingresar">
                 </div>
                 <div>
-                    <input (click)="IngresarConGoogle()" type="image" src="assets/image1.png" class="button1" value="">
+                    <input (click)="IngresarConGoogle()" type="image" src="assets/google.png" class="button1" value="">
                 </div>
            
             </div>
-</section> -->
+</section>
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -53,14 +75,16 @@
           </div>
         </div>
         <div class="col">
-          <div class="login">
+            <form autocomplete="off"[formGroup]="FormLogin">
+          <div class="login">   
+
             <h1>Ingresar</h1>
-            <input type="email" class ="form-control" formControlName="email"> 
+            <input type="email" placeholder="Email" class ="form-control" formControlName="email"> 
             <span class="form-text text-danger" *ngIf="validacion('email')">
                 No es una direccion valida
             </span>
 
-            <input type="text" placeholder="Contraseña" />
+            <input type="text" placeholder="Contraseña" class ="form-control" formControlName="pass" />
             <span class="form-text text-danger" *ngIf="validacion('pass')">
                 La contraseña debe tener al menos 6 caracteres.
             </span>
@@ -74,6 +98,7 @@
                 <input (click)="IngresarConGoogle()" type="image" src="assets/image1.png" class="button1" value="">
             </div>  
         </div>
+            </form>
         </div>
       </div>
     </div>
