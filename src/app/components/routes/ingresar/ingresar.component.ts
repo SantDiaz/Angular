@@ -61,7 +61,7 @@ async IngresarConGoogle(){
     const user = await this.authService.loginWithGoogle(email, pass);
     if (user){
       localStorage.setItem('usuario', JSON.stringify(user.user))
-      this.router.navigate(['/inicio']);
+      this.router.navigate(['/Inicio']);
     } 
    } catch (err){
      console.log(err)

@@ -26,12 +26,12 @@ const routes: Routes = [
   },
   {
     path: 'Mi Lista',
-    component: IngresarComponent
+    component: MyListComponent
   },
 
   {
     path: '**',
-    redirectTo: 'Inicio'
+    redirectTo: 'Ingresar'
   }
 
 ];

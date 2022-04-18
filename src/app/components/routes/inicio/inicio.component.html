@@ -17,7 +17,7 @@
   <div *ngIf="filter == 'Todos'">
   <div class="flex">
     <div *ngFor="let nombre of Todos">
-      <!-- <app-card [isadd] = true [movies_series]= nombre></app-card> -->
+      <app-card [isadd] = true [movies_series]= nombre></app-card>
       <!-- <app-card [movies_series]= nombre></app-card>  -->
     </div>
   </div>
@@ -26,7 +26,7 @@
 <div *ngIf="filter == 'Pelicula'">
   <div class="flex">
     <div *ngFor="let nombre of Movies">
-      <!-- <app-card [isadd] = true [movies_series]= nombre></app-card> -->
+      <app-card [isadd] = true [movies_series]= nombre></app-card>
       <!-- <app-card [movies_series]= nombre></app-card>  -->
     </div>
   </div>
@@ -35,7 +35,7 @@
 <div *ngIf="filter == 'Serie'">
   <div class="flex">
     <div *ngFor="let nombre of Series">
-      <!-- <app-card [isadd] = true [movies_series]= nombre></app-card> -->
+      <app-card [isadd] = true [movies_series]= nombre></app-card>
       <!-- <app-card [movies_series]= nombre></app-card>   -->
     </div>
   </div>

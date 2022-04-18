@@ -1,4 +1,4 @@
-export interface Trending {
+export interface Trending extends MovieSerieBase {
     adult?:            boolean;
     backdrop_path:     string;
     genre_ids:         number[];
